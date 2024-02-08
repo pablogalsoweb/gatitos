@@ -9,7 +9,7 @@ export function Gatitos() {
 
     return (
       <>
-        <div align='center'>
+        <div>
           <a href="https://react.dev" target="_blank">
             <img src={gatoLogo} className="logo gato" alt="gato logo" />
           </a>

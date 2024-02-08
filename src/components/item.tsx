@@ -12,21 +12,32 @@ const ANIMALITOS:Animalitos = {
     'https://cdn2.thecatapi.com' : 'gatos'
  }; 
  
-function parseUrlAnimal(urlPrincipal:string){    
-         return ANIMALITOS[urlPrincipal]; 
+function parseUrlAnimal(urlPrincipal:string){   
+
+    console.log("---" + ANIMALITOS[urlPrincipal].includes("perros"));
+    if (ANIMALITOS[urlPrincipal].includes("perros") || ANIMALITOS[urlPrincipal].includes("gatos")) {
+        return ANIMALITOS[urlPrincipal]; 
+    
+    } else {
+        // Si no coincide con ninguna, podrías devolver un valor predeterminado o lanzar un error
+        throw new Error('No se pudo determinar el animal.');
+    } 
+          
 }
 
 function getAnimal(url:string):string{
     // Encontrar la posición de "/images"
     const indiceImages = url.indexOf("/images");
     const urlPrincipal = url.substring(0, indiceImages);
-
+    console.log(urlPrincipal);
     return parseUrlAnimal(urlPrincipal);
 }
 
 export function Item({item}:ItemProps){
    
-    const animal: keyof typeof totalMegusta = getAnimal(item.url);
+   
+    //const animal: keyof typeof totalMegusta = getAnimal(item.url);
+    const animal = item.url == 'https://cdn2.thedogapi.com' ? 'perros' : 'gatos';
 
     const [megusta, setMegusta] = useState<boolean>(false);
  

@@ -1,5 +1,5 @@
 
-
+import { CSSProperties } from 'react';
 import { Item } from './item';
 import {useFetchApiDog} from "../hooks/useFetchApiDog";
 
@@ -20,9 +20,15 @@ export function ItemsListaDog(){
         setPage(page+1);
     };
 
+    const estilo: CSSProperties = {
+        color: 'red',
+        fontSize: '20px',
+        backgroundColor: 'yellow'
+    };
+
     return (
         <>
-        { error && <p Style="color:red">{error}</p>}
+        { error && <p style={estilo}>{error}</p>}
           <ul>
               {
                   items.map(

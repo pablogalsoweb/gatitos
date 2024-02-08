@@ -1,4 +1,4 @@
-
+import { CSSProperties } from 'react';
 
 import { Item } from './item';
 import {useFetchApiCat} from "../hooks/useFetchApiCat";
@@ -19,9 +19,15 @@ export function ItemsListaCat(){
         setPage(page+1);
     };
 
+    const estilo: CSSProperties = {
+        color: 'red',
+        fontSize: '20px',
+        backgroundColor: 'yellow'
+    };
+
     return (
         <>
-        { error && <p Style="color:red">{error}</p>}
+        { error && <p style={estilo}>{error}</p>}
           <ul>
               {
                   items.map(
