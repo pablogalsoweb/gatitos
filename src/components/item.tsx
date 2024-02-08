@@ -3,6 +3,7 @@ import { useState, useContext } from 'react';
 import { TotalMeGustaContext } from '../Context/totalMeGustaContextProvider';
 import {ItemProps, TotalMeGustaState} from "../interfaces/interface"
 
+/*
 type Animalitos = {
     [url: string] : string;
 };
@@ -23,15 +24,15 @@ function parseUrlAnimal(urlPrincipal:string){
         throw new Error('No se pudo determinar el animal.');
     } 
           
-}
+}*/
 
-function getAnimal(url:string):string{
+/*function getAnimal(url:string):string{
     // Encontrar la posición de "/images"
     const indiceImages = url.indexOf("/images");
     const urlPrincipal = url.substring(0, indiceImages);
     console.log(urlPrincipal);
     return parseUrlAnimal(urlPrincipal);
-}
+}*/
 
 export function Item({item}:ItemProps){
    
