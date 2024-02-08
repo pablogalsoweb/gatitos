@@ -4,7 +4,7 @@ export function Home() {
 
     return (
       <>
-      <div align='center'>
+      <div>
          <img src={logo} className="logo" alt="logo" />
           
         </div>
