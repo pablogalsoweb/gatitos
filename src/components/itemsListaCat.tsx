@@ -8,7 +8,7 @@ import {useState} from "react";
 
 import {MisTipoLista} from "../interfaces/interface"
 
-const LIMIT_ITEMS = 2;
+const LIMIT_ITEMS = 10;
  
 export function ItemsListaCat(){
 

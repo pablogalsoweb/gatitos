@@ -17,7 +17,7 @@ export function Perritos() {
           </a>
         </div>
         <h1>Perritos</h1>
-        <p>{totalMegusta.perros} perritos me gustan</p>
+        <p className='barra_contador'>{totalMegusta.perros} perritos me gustan</p>
         <div className="card">
               <ItemsListaDog/>
         </div>

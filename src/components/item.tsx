@@ -26,20 +26,22 @@ function parseUrlAnimal(urlPrincipal:string){
           
 }*/
 
-/*function getAnimal(url:string):string{
+ function getAnimal(url:string):string{
     // Encontrar la posición de "/images"
     const indiceImages = url.indexOf("/images");
     const urlPrincipal = url.substring(0, indiceImages);
     console.log(urlPrincipal);
-    return parseUrlAnimal(urlPrincipal);
-}*/
+    //return parseUrlAnimal(urlPrincipal);
+    return urlPrincipal;
+}
 
 export function Item({item}:ItemProps){
    
    
     //const animal: keyof typeof totalMegusta = getAnimal(item.url);
-    const animal = item.url == 'https://cdn2.thedogapi.com' ? 'perros' : 'gatos';
-
+    const urlPrincipal = getAnimal(item.url);
+    const animal = urlPrincipal == 'https://cdn2.thedogapi.com' ? 'perros' : 'gatos';
+console.log(item.url);
     const [megusta, setMegusta] = useState<boolean>(false);
  
     const {totalMegusta, setTotalMegusta} = useContext(TotalMeGustaContext);
